@@ -27,6 +27,13 @@ app.post("/home", function (req, res) {
   res.send("THIS IS HOME PAGE POST METHOD");
 });
 
-app.listen(5000, function () {
-  console.log("SERVER STARTED");
-});
+// app.listen(5000, function () {
+//   console.log("SERVER STARTED");
+// });
+if (process.env.NODE_ENV !== "production") {
+  app.listen(5000, function () {
+    console.log("SERVER STARTED");
+  });
+}
+
+module.exports = app;
