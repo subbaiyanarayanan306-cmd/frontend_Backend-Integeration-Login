@@ -22,7 +22,7 @@ const App = () => {
       alert("Please Enter the Required email and password");
       return;
     }
-    var logindetailes = await axios.get(
+    var logindetailes = axios.get(
       `https://frontend-backend-integeration-login-seven.vercel.app/home?email=${ename}&password=${pname}`,
       { email: ename, password: pname },
 
