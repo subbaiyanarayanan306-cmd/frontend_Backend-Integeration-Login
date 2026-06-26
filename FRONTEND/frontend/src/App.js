@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AXIOS from "axios";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { MdOutlineMail } from "react-icons/md";
@@ -29,7 +28,7 @@ const App = () => {
     );
     console.log(logindetailes);
     logindetailes.then(function (data) {
-      if (data.data == true) {
+      if (data.data === true) {
         navigation("/success");
       } else {
         navigation("/fail");
