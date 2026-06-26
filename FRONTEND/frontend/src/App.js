@@ -22,9 +22,12 @@ const App = () => {
       alert("Please Enter the Required email and password");
       return;
     }
-    var logindetailes = axios.get(
-      `http://localhost:5000/home?email=${ename}&password=${pname}`,
+    var logindetailes = await axios.get(
+      `https://frontend-backend-integeration-login-seven.vercel.app/home?email=${ename}&password=${pname}`,
       { email: ename, password: pname },
+
+      //  `http://localhost:5000/home?email=${ename}&password=${pname}`,
+      // { email: ename, password: pname },
     );
     console.log(logindetailes);
     logindetailes.then(function (data) {
