@@ -23,13 +23,13 @@ const App = () => {
       return;
     }
     var logindetailes = axios.get(
-      `https://frontend-backend-integeration-login-seven.vercel.app/home?email=${ename}&password=${pname}`
+      `https://frontend-backend-integeration-login-seven.vercel.app/home?email=${ename}&password=${pname}`,
       // { email: ename, password: pname },
     );
     console.log(logindetailes);
     logindetailes.then(function (data) {
       if (data.data === true) {
-        navigation("/success");
+        navigation("/success",{state:{ename:ename}});
       } else {
         navigation("/fail");
       }
@@ -78,5 +78,5 @@ const App = () => {
 
 export default App;
 
- //  `http://localhost:5000/home?email=${ename}&password=${pname}`,
-      // { email: ename, password: pname },
+//  `http://localhost:5000/home?email=${ename}&password=${pname}`,
+// { email: ename, password: pname },
