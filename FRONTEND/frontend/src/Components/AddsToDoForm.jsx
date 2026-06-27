@@ -1,4 +1,4 @@
-import React, { Activity, useState } from "react";
+import React, {useState } from "react";
 
 const AddsToDoForm = (props) => {
   const activityArr = props.activityArr;
@@ -10,7 +10,7 @@ const AddsToDoForm = (props) => {
   }
 
   function clickAdd() {
-    if (input == "") {
+    if (input === "") {
       alert("INPUT CAN'T BE EMPTY");
       return;
     }

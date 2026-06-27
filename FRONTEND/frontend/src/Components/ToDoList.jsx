@@ -1,4 +1,4 @@
-import React, { act, useState } from "react";
+import React, {useState } from "react";
 import ToDoItem from "./ToDoItem";
 
 const ToDoList = (props) => {
@@ -18,7 +18,7 @@ const ToDoList = (props) => {
   return (
     <div className="bg-[#DBD4EA] flex-grow p-3 rounded">
       <h1 className="font-medium text-2x1">Today's Activity</h1>
-      {activityArr.length == 0 ? <p>You haven't added any activity yet</p> : ""}
+      {activityArr.length === 0 ? <p>You haven't added any activity yet</p> : ""}
 
       {activityArr.map(function (item, index) {
         return (

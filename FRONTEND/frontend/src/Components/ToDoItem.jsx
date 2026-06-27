@@ -6,7 +6,7 @@ const ToDoItem = (props) => {
 
   function handledelete() {
     var referenarr = activityArr.filter(function (item) {
-      if (item.id == props.id) {
+      if (item.id === props.id) {
         return false;
       } else {
         return true;
