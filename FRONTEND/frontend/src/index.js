@@ -5,6 +5,7 @@ import {Routes,Route,BrowserRouter} from 'react-router-dom'
 import App from "./App";
 import Successfull from "./Successfull";
 import Fail from "./Fail";
+import SignUp from "./SignUp";
 
 const root=ReactDom.createRoot(document.getElementById('root'))
 
@@ -15,6 +16,7 @@ root.render(
     <Route path="/" element={<App/>}></Route>
     <Route path="/success" element={<Successfull/>}></Route>
     <Route path="/fail" element={<Fail/>}></Route>
+    <Route path="/Signup" element={<SignUp/>}></Route>
    </Routes>
   </BrowserRouter>
 </div>

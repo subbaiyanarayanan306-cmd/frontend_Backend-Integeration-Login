@@ -3,6 +3,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { MdOutlineMail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
+import {Link} from 'react-router-dom'
+import SignUp from "./SignUp";
 
 const App = () => {
   const [ename, setEname] = useState("");
@@ -71,9 +73,9 @@ const App = () => {
         >
           Login
         </button>
-        {/* <button className="w-26 border border-black p-1 rounded-md  hover:bg-red-400 font-bold">
+        <Link to={"/Signup"} className="w-26 border border-black p-1 rounded-md  hover:bg-red-400 font-bold">
           SignUp
-        </button> */}
+        </Link>
       </div>
     </div>
   );
