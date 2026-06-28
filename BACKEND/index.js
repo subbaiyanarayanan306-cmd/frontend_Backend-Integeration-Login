@@ -5,21 +5,56 @@ const cors = require("cors");
 var app = express();
 app.use(cors());
 
-app.use(express.urlencoded({extended:true}))
-app.use(express.json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
-var useremail = "subbu@gmail.com";
-var password = 12345;
-app.get("/home", function (req, res) {
-  console.log(req.query.email);
-  console.log(req.query.password);
-  console.log("HOME PAGE RUNNING");
-  // res.send("THIS IS HOME PAGE")
-  if (useremail == req.query.email && password == req.query.password) {
+let users=[
+  {
+    useremail:"subbu@gmail.com",
+    password:12345,
+  },
+];
+
+// var useremail = "subbu@gmail.com";
+// var password = 12345;
+
+// app.get("/home", function (req, res) {
+//   console.log(req.query.email);
+//   console.log(req.query.password);
+//   console.log("HOME PAGE RUNNING");
+//   // res.send("THIS IS HOME PAGE")
+//   if (useremail == req.query.email && password == req.query.password) {
+//     res.send(true);
+//   } else {
+//     res.send(false);
+//   }
+// });
+
+app.get("/home", (req, res) => {
+  const { email, password } = req.query;
+
+  const user = users.find(
+    (u) => u.useremail === email && u.password === password
+  );
+
+  if (user) {
     res.send(true);
-  }else {
+  } else {
     res.send(false);
   }
+});
+
+app.post("/signup", (req, res) => {
+  const { email, password } = req.body;
+
+  users.push({
+    useremail: email,
+    password: password,
+  });
+
+  console.log(users);
+
+  res.send("Signup Successful");
 });
 
 app.post("/home", function (req, res) {
