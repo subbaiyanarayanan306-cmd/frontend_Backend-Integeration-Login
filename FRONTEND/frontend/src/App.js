@@ -44,6 +44,7 @@ const App = () => {
     <div className="bg-black flex justify-center text-center p-10">
       <div className="bg-[#EFEFEF] p-6 md:p-10 border rounded-md flex flex-col gap-5 justify-center text-center flex-wrap p-20">
         <h1 className="font-medium text-2xl text-red-500">LOGIN PAGE</h1>
+        <p>Note : mail:subbu@gmail.com password :12345</p>
         <div className="relative">
           <MdOutlineMail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-500 text-xl" />
           <input
