@@ -29,7 +29,7 @@ const App = () => {
     console.log(logindetailes);
     logindetailes.then(function (data) {
       if (data.data === true) {
-        navigation("/success",{state:{ename:ename}});
+        navigation("/success", { state: { ename: ename } });
       } else {
         navigation("/fail");
       }
@@ -66,11 +66,14 @@ const App = () => {
           />
         </div>
         <button
-          className="w-36 border border-black p-1 rounded-md  hover:bg-red-400 font-bold"
+          className="w-26 border border-black p-1 rounded-md  hover:bg-red-400 font-bold"
           onClick={checkuser}
         >
           Login
         </button>
+        {/* <button className="w-26 border border-black p-1 rounded-md  hover:bg-red-400 font-bold">
+          SignUp
+        </button> */}
       </div>
     </div>
   );
