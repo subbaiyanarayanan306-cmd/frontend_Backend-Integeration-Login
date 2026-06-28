@@ -4,11 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { MdOutlineMail } from "react-icons/md";
 import { RiLockPasswordFill } from "react-icons/ri";
 import {Link} from 'react-router-dom'
-import SignUp from "./SignUp";
+// import SignUp from "./SignUp";
 
 const App = () => {
   const [ename, setEname] = useState("");
   const [pname, setPname] = useState("");
+
 
   function handleemail(e) {
     setEname(e.target.value);
